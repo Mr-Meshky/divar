@@ -3,4 +3,8 @@ const mobileValidation = (mobile) => {
   return refex.test(mobile);
 };
 
-export { mobileValidation };
+const adminFormValidation = ({ name, slug, icon }) => {
+  return !name || !slug || !icon;
+};
+
+export { mobileValidation, adminFormValidation };

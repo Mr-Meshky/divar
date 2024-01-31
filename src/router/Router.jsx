@@ -6,7 +6,7 @@ import AuthPage from "pages/AuthPage";
 import DashboardPage from "pages/DashboardPage";
 import AdminPage from "pages/AdminPage";
 import PageNotFound from "pages/404";
-import Loader from "components/templates/modules/Loader";
+import Loader from "components/modules/Loader";
 
 import { getProfile } from "services/user";
 

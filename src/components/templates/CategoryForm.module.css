@@ -1,0 +1,63 @@
+.form h3 {
+  margin-bottom: 30px;
+  border-bottom: 3px solid #a62626;
+  width: fit-content;
+  padding-bottom: 5px;
+}
+
+.form label {
+  display: flex;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.form input {
+  display: flex;
+  width: 300px;
+  padding: 5px;
+  border: 1px solid silver;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.form button {
+  background: #a62626;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  padding: 10px 25px;
+  cursor: pointer;
+}
+
+.form button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.form p {
+  color: #fff;
+  margin-bottom: 20px;
+  padding: 5px;
+  text-align: center;
+  border-radius: 5px;
+  animation: hide 3s forwards;
+}
+
+@keyframes hide {
+  0% {
+    display: block;
+  }
+
+  100% {
+    display: none;
+  }
+}
+
+.form p.success {
+  background: #26a644;
+}
+
+.form p.error {
+  background: #a62626;
+}

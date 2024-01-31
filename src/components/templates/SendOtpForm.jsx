@@ -1,21 +1,22 @@
 import { mobileValidation } from "helpers/helper";
 import { sendOtp } from "services/auth";
+import { toast } from "react-toastify";
 
-import styles from './SendOtpForm.module.css';
+import styles from "./SendOtpForm.module.css";
 
 function SendOtpForm({ mobile, setMobile, setStep }) {
   const submitHandler = async (e) => {
     e.preventDefault();
 
     if (!mobileValidation(mobile)) {
-      alert("لطفا یک شماره موبایل معتبر وارد نمایید.");
+      toast.warning("لطفا یک شماره موبایل معتبر وارد نمایید.");
       return;
     }
 
     const { response, error } = await sendOtp(mobile);
     if (response) setStep(2);
 
-    if (error) alert(error.response.data.message);
+    if (error) toast.error(error.response.data.message);
   };
 
   return (
@@ -25,7 +26,7 @@ function SendOtpForm({ mobile, setMobile, setStep }) {
         برای استفاده از امکانات دیوار، لطفاً شمارهٔ موبایل خود را وارد کنید. کد
         تأیید به این شماره پیامک خواهد شد.
       </span>
-      <label htmlFor="">شمارهٔ موبایل خود را وارد کنید</label>
+      <label htmlFor="input">شمارهٔ موبایل خود را وارد کنید</label>
       <input
         type="text"
         id="input"

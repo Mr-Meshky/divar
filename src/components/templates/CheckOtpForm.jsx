@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
 
 import { checkOtp } from "services/auth";
 import { getProfile } from "services/user";
@@ -21,18 +22,18 @@ function CheckOtpForm({ mobile, code, setCode, setStep }) {
     e.preventDefault();
 
     if (code.length !== 5) {
-      alert("کد پیامک نامعتبر است");
+      toast.error("کد تایید نامعتبر است");
       return;
     }
 
-    const { response, error } = await checkOtp(mobile, code);
+    const { response } = await checkOtp(mobile, code);
+
     if (response) {
       setCookie(response.data);
       refetch();
       navigate("/");
-    }
-    if (error) {
-      alert("کد پیامک نادرست است");
+    } else {
+      toast.error("کد تایید نادرست است");
     }
   };
 

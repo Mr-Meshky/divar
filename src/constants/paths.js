@@ -5,7 +5,7 @@ export const paths = [
   "constants",
   "configs",
   "helpers",
-  "layout",
+  "layouts",
   "pages",
   "router",
   "services",
