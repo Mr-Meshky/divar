@@ -6,6 +6,7 @@ import { toast } from "react-toastify";
 import { checkOtp } from "services/auth";
 import { getProfile } from "services/user";
 import { setCookie } from "utils/cookie";
+import { p2e } from "helpers/helper";
 
 import styles from "./CheckOtpForm.module.css";
 
@@ -47,7 +48,7 @@ function CheckOtpForm({ mobile, code, setCode, setStep }) {
         id="input"
         placeholder="کد تایید"
         value={code}
-        onChange={(e) => setCode(e.target.value)}
+        onChange={(e) => setCode(p2e(e.target.value))}
         ref={input}
       />
       <button type="submit">ورود</button>

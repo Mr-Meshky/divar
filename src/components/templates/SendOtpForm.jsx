@@ -2,6 +2,8 @@ import { mobileValidation } from "helpers/helper";
 import { sendOtp } from "services/auth";
 import { toast } from "react-toastify";
 
+import { p2e } from "helpers/helper";
+
 import styles from "./SendOtpForm.module.css";
 
 function SendOtpForm({ mobile, setMobile, setStep }) {
@@ -32,7 +34,7 @@ function SendOtpForm({ mobile, setMobile, setStep }) {
         id="input"
         placeholder="شماره موبایل"
         value={mobile}
-        onChange={(e) => setMobile(e.target.value)}
+        onChange={(e) => setMobile(p2e(e.target.value))}
       />
       <button type="submit">ارسال کد تایید</button>
     </form>
