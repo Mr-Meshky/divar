@@ -19,7 +19,6 @@ function App() {
           <Toast />
           <Router />
         </Layout>
-        <ReactQueryDevtools />
       </QueryClientProvider>
     </BrowserRouter>
   );

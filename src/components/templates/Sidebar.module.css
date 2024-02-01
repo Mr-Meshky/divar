@@ -1,0 +1,33 @@
+.sidebar {
+  margin-top: 30px;
+  width: 200px;
+}
+
+.sidebar li {
+  display: flex;
+  margin: 20px 0;
+}
+
+.sidebar li p {
+  font-weight: 200;
+  margin-right: 10px;
+  color: gray;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+  }
+
+  .sidebar ul {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 10px;
+  }
+
+  .sidebar li {
+    margin: 0 20px;
+  }
+}

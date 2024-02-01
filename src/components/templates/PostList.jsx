@@ -20,7 +20,7 @@ function PostList() {
       ) : (
         <>
           <h3>آگهی‌های شما</h3>
-          {data.data.posts.map((post) => (
+          {data.data.posts.reverse().map((post) => (
             <div key={post._id} className={styles.post}>
               <img
                 src="/delete.svg"
