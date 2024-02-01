@@ -1,0 +1,65 @@
+.wrapper {
+  display: flex;
+  margin-top: 40px;
+  gap: 20px;
+}
+
+.wrapper .cover {
+  width: 400px;
+  height: 400px;
+  border-radius: 7px;
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.15);
+}
+
+.wrapper .info {
+  color: gray;
+}
+
+.wrapper .info h3 {
+  color: #000;
+  margin-bottom: 10px;
+}
+
+.info hr {
+  margin: 10px 0 7px;
+}
+
+.info .descriptions {
+  text-align: justify;
+  line-height: 30px;
+  margin-bottom: 25px;
+}
+
+.info p:not(.descriptions) {
+  color: #292929;
+}
+
+.info span {
+  display: flex;
+  gap: 3px;
+  margin-bottom: 8px;
+}
+
+.info span img {
+  width: 20px;
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .wrapper .cover {
+    width: 90%;
+    height: auto;
+    margin: auto;
+    margin-bottom: 15px;
+  }
+
+  .wrapper > div {
+    width: 83%;
+    margin: auto;
+  }
+}

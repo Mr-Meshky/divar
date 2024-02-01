@@ -1,12 +1,19 @@
 import { sp } from "helpers/helper";
 
 import styles from "./Main.module.css";
+import { useNavigate } from "react-router-dom";
 
 function Main({ data }) {
+  const navigate = useNavigate();
+
   return (
     <div className={styles.container}>
       {data.data.posts.map((post) => (
-        <div key={post._id} className={styles.card}>
+        <div
+          key={post._id}
+          className={styles.card}
+          onClick={() => navigate(`advertising/${post._id}`)}
+        >
           <div className={styles.info}>
             <p>{post.options.title}</p>
             <div>

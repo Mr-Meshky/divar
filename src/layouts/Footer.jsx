@@ -3,7 +3,9 @@ import styles from "./Footer.module.css";
 function Footer() {
   return (
     <footer className={styles.footer}>
-      <p>Develop by MrMeshky with ❤️</p>
+      <p>
+        توسعه داده شده با ❤️ توسط <a href="https://mrmeshky.ir">مسترمشکی</a>
+      </p>
     </footer>
   );
 }

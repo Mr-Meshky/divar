@@ -7,6 +7,7 @@ import DashboardPage from "pages/DashboardPage";
 import AdminPage from "pages/AdminPage";
 import PageNotFound from "pages/404";
 import Loader from "components/modules/Loader";
+import AdvertisementDetailsPage from "src/pages/AdvertisementDetailsPage";
 
 import { getProfile } from "services/user";
 
@@ -18,6 +19,7 @@ function Router() {
   return (
     <Routes>
       <Route index element={<HomePage />} />
+      <Route path="advertising/:id" element={<AdvertisementDetailsPage />} />
       <Route
         path="/dashboard"
         element={data ? <DashboardPage /> : <Navigate to="/auth" />}

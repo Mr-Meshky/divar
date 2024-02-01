@@ -29,6 +29,8 @@ const addPost = async (formData) => {
 
 const getMyPosts = () => api.get("post/my");
 
+const getPostById = (id) => api.get(`post/${id}`);
+
 const deletePost = (id) => api.delete(`post/delete/${id}`);
 
-export { addPost, getMyPosts, deletePost };
+export { addPost, getMyPosts, deletePost, getPostById };
