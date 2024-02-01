@@ -14,6 +14,79 @@
 
 .header div {
   display: flex;
+  align-items: center;
+}
+
+.header .divarMan {
+  position: relative;
+  transition: 0.3s ease-out;
+  padding: 0 7px;
+  border-radius: 6px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.header .divarMan:hover {
+  background: #eaeaea;
+}
+
+.divarMan div {
+  position: absolute;
+  padding: 10px 15px;
+  width: 100px;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 0 0 8px rgb(0, 0, 0, 0.1);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: none;
+}
+
+.divarMan div a {
+  transition: 0.3s ease-out;
+}
+
+.divarMan div a:hover {
+  color: #a62626;
+}
+
+.divarMan div > p {
+  position: relative;
+  transition: 0.3s ease-out;
+}
+
+.divarMan div > p::before {
+  content: "";
+  position: absolute;
+  bottom: -3px;
+  right: 0;
+  height: 2px;
+  width: 0px;
+  background: #a62626;
+  transition: 0.3s ease-in;
+}
+
+.divarMan div > p:hover {
+  color: #a62626;
+}
+
+.divarMan div > p:hover::before {
+  width: 100%;
+}
+
+.divarMan hr {
+  width: 120%;
+  margin: 7px 0;
+  background: silver;
+}
+
+.header .divarMan:hover div {
+  display: flex;
 }
 
 .header span {
